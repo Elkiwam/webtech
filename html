@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Testing HTML</title>
+
+    <!-- Here in the html <style> website-wide stylings are defined in css-->
+    <style>
+        body {
+            background-color: #3c3c3c;
+        }
+
+        h1 {
+            /* Added margin, also possible in shorthand with four different sides */
+            margin: 50px 80px;
+
+            color: whitesmoke;
+            /* ,sans-serif is a generic family acting as a fallback font should the first choice not be available  */
+            font-family: verdana, sans-serif;
+            font-size: 80px;
+        }
+
+        p {
+            line-height: 1.5;
+            color: whitesmoke;
+            font-family: verdana;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 40px;
+        }
+
+        a:link {
+            color: #FF00D8;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ffbcf5;
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        img {
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- in the body the main content of the website is defined -->
+    <!-- the :root {} holds a variable var for the image width-->
+    <style>
+        :root {
+            --image-width: 320px;
+        }
+    </style>
+
+    <!-- These are different text elements, styled by their respective <style> defined in the header-->
+    <h1> This is a styled H1 </h1>
+    <h3> This is a default H3 </h3>
+    <p> This is a paragraph in a box, bordered by a 2px black line <br>
+        After a break the line resumes here.</p>
+    <a href="https://google.com">This is a styled link with a hover style<br></a>
+
+    <!-- The images are centered by this tag and put into a row, 
+         the <center> is considered a parent, the <img> are its children, the imgs are also siblings-->
+    <center>
+        <img src="/Images/Image-test.jpg" alt="Image-test.jpg" style="width: var(--image-width)">
+        <img src="/Images/Image-test-2.jpg" alt="Image-test.jpg" style="width:  var(--image-width)" height="120">
+        <img src="/Images/Image-test-3.jpg" alt="Image-test.jpg" width="120" height="120">
+    </center>
+</body>
+
+</html>
