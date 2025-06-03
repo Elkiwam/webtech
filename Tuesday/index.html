@@ -13,9 +13,26 @@
 <!-- Absolute paths start at the HD and go static to the very root, meaning when a source is moved the path breaks. Relative paths
  can be more flexible: src= "./level1" (check the presentation for in-depth information) Go to parent: src=" ../img-name" -->
 
+ <!-- Specificity = hierarchy when multiple css rules point to the same element. Elements and pseudo are the lowest priority,
+  then it goes up with: Attributes, Classes/pseudo classes, ID selectors and finally Inline styles -->
+
 <body>
-    <h1> Dsischtig </h1>
-    <h3> with external css file for styling </h3>
+
+    <div class="header">
+        <h1>Testing HTML and CSS on Tuesday</h1>
+        <p>This here is a header div class styled in external css, testing style overrides with hierarchical specificity.</p>
+        </div>
+
+    <h1> Tuesdays h1 </h1>
+    <h3> with external css-file for styling </h3>
+
+<div> 
+    <center>
+        <img src="/Monday/Images/Image-test-2.jpg" alt="Image-test.jpg" style="width:  var(--image-width)">
+        <img src="/Monday/Images/Image-test.jpg" alt="Image-test.jpg" style="width: var(--image-width)">
+        <img src="/Monday/Images/Image-test-3.jpg" alt="Image-test.jpg" style="width: var(--image-width)">
+    </center>
+</div>
 
 </body>
 
