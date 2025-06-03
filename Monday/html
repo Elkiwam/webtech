@@ -4,7 +4,7 @@
 <head>
     <title>Testing HTML</title>
 
-    <!-- Here in the html <style> website-wide stylings are defined in css-->
+    <!-- Here in the html <style> website-wide stylings are defined in a block of internal css-->
     <style>
         body {
             background-color: #3c3c3c;
@@ -67,9 +67,9 @@
     <!-- The images are centered by this tag and put into a row, 
          the <center> is considered a parent, the <img> are its children, the imgs are also siblings-->
     <center>
-        <img src="/Images/Image-test.jpg" alt="Image-test.jpg" style="width: var(--image-width)">
-        <img src="/Images/Image-test-2.jpg" alt="Image-test.jpg" style="width:  var(--image-width)" height="120">
-        <img src="/Images/Image-test-3.jpg" alt="Image-test.jpg" width="120" height="120">
+        <img src="/Monday/Images/Image-test.jpg" alt="Image-test.jpg" style="width: var(--image-width)">
+        <img src="/Monday/Images/Image-test-2.jpg" alt="Image-test.jpg" style="width:  var(--image-width)" height="120">
+        <img src="/Monday/Images/Image-test-3.jpg" alt="Image-test.jpg" width="120" height="120">
     </center>
 </body>
 
