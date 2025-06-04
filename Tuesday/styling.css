@@ -70,6 +70,12 @@ img {
 
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+img:hover {
+  scale: 1.2;
+  transition: scale 0.3s ease-in-out;
 }
 
 
