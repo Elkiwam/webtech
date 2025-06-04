@@ -1,75 +1,139 @@
-body {
+/* This code overrides default browser settings for margins/paddings/box sizings on all elements */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Arial, sans-serif;
   background-color: rgb(40, 147, 255);
   color: #333;
-
-  text-align: center;
-
 }
 
+p {
+  padding: 0 4vw 0 2vh;
+  max-width: 50vw;
+  display: inline-block;
+}
 
-
-/* styling headings, uses  css selectors, elements (a), classes, pseudo classes (a:hover) */
 h1 {
-  margin: 0;
-  padding: 10px;
-  font-size: 60px;
-  display: inline;
-
-  color: rgb(255, 255, 255);
+  position: relative;
+  padding: 2vh 0 0 2vh;
+  font-size: 4em;
+  color: #ffffff;
   text-align: left;
 }
 
 /* Style the header */
 .header {
-  background-color: #b1b1b1;
-  padding: 20px;
+
+  background-color: #686868;
+  padding: 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: left;
-
+  box-sizing: border-box;
   /* this color applies to "unclaimed" paragraphs */
-  color: rgb(0, 40, 173);
+  color: rgb(255, 255, 255);
+}
 
-  /* while these settings override the h1 element setting because of the hierarchical Specificity */
-  h1 {
-    color: rgb(255, 255, 255);
-    text-align: left;
-  }
+/* Style the footer */
+.footer {
+  background-color: #686868;
+  padding: 2vh 2vw;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
 }
 
 :root {
-  --image-width: 50px;
+  --image-width: 33vw;
 }
 
 img {
   width: var(--image-width);
   height: auto;
-
 }
 
-.cats {
-  display: inline;
+hr.blackline {
+  height: 3px;
+  border-width: 0;
+  background-color: rgb(0, 0, 0);
+  margin: 2vh;
 }
 
+.top-align {
+  display: flex;
+  align-items: start;
+}
 
 /*thats the basic styling for the grid */
 .container {
   display: grid;
-  grid-template-columns: 20vw auto auto;
-  grid-template-rows: auto 800px;
-  width: 100vw;
-  grid-gap: 10px;
-  padding: 10px;
+  grid-template-columns: 50vw auto;
+  grid-template-rows: 50vh 50vh;
+  width: 80vw;
+  justify-content: space-between;
   box-sizing: border-box;
-
-
 }
 
-/* thats the styling for the divs inside the grid */
+/* thats the styling for the divs inside the grid currently not used*/
 .container>div {
   background-color: #ffffff00;
   padding: 50px;
   font-size: 20px;
   text-align: center;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: var(--image-width);
+  height: 50vw;
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-box-back {
+  color: white;
+  transform: rotateY(180deg);
+  text-align: center;
+  vertical-align: top;
 }
