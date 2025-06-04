@@ -1,0 +1,52 @@
+/* Main CSS File */
+
+/* Reset some default browser styles */
+a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #e3e3e3;
+    size: 3em;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #000;
+    margin: 1vw;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background: #0078d7;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+/* Link styles */
+a {
+    color: #0078d7;
+    size: 24px;
+    text-decoration: none;
+    padding: 0 40px 0 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}

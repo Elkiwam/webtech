@@ -72,6 +72,20 @@ img {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-div {
-  margin: 50px 0;
+
+
+.container {
+  display: grid;
+  grid-template-columns: 33vw 33vw auto;
+  background-color: dodgerblue;
+  padding: 1%;
+  width: 100vw;
+}
+
+.container>div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 30px;
+  font-size: 30px;
+  text-align: center;
 }
