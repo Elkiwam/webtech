@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: dodgerblue;
   color: #333;
 
   text-align: center;
@@ -19,18 +19,22 @@ h1 {
   text-align: center;
 }
 
+/*thats the basic styling for the grid */
 .container {
   display: grid;
-  grid-template-columns: auto auto auto;
-  background-color: dodgerblue;
-  padding: 1%;
+  grid-template-columns: 20vw auto auto;
   width: 100vw;
+  grid-gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+
+
 }
 
+/* thats the styling for the divs inside the grid */
 .container>div {
   background-color: #f1f1f1;
-  border: 1px solid black;
-  padding: 30px;
+  padding: 50px;
   font-size: 30px;
   text-align: center;
 }
