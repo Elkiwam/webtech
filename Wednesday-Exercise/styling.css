@@ -94,7 +94,7 @@ hr.blackline {
 .flip-box {
   background-color: transparent;
   width: var(--image-width);
-  height: 50vw;
+  height: 20vw;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
