@@ -51,12 +51,8 @@ h1 {
 
 }
 
-:root {
-  --image-width: 33vw;
-}
-
 img {
-  width: var(--image-width);
+  width: 100%;
   height: auto;
 }
 
@@ -82,7 +78,7 @@ hr.blackline {
   box-sizing: border-box;
 }
 
-/* thats the styling for the divs inside the grid currently not used*/
+/* thats the styling for the divs (> only affects direct children) inside the grid currently not used*/
 .container>div {
   background-color: #ffffff00;
   padding: 50px;
@@ -93,7 +89,7 @@ hr.blackline {
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
-  width: var(--image-width);
+  width: 100%;
   height: 20vw;
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
