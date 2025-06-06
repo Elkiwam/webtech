@@ -52,8 +52,9 @@ h1 {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  width: 20%;
+  padding: 2vh 2vw;
+
 }
 
 hr.blackline {
